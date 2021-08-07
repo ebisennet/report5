@@ -41,6 +41,6 @@ echo "teat2-4: 異常系"
 echo "Error!k" > $tmp-ans
 diff $tmp-result $tmp-ans || echo "error in test2-4" >> $tmp-error
 
-if [ -f $ $tmp-error ]; then
+if [ -f $tmp-error ]; then
     ERROR_EXIT
 fi
