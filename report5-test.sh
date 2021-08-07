@@ -10,7 +10,7 @@ ERROR_EXIT () {
     exit 1 # エラー終了
 }
 # テスト開始
-# teat1: 正常系
+echo "teat1: 正常系"
 ./report5.sh 5 10 > $tmp-result
 echo "5" > $tmp-ans
 diff $tmp-result $tmp-ans || ERROR_EXIT "error in test1-1"
