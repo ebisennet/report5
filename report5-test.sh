@@ -10,12 +10,22 @@ ERROR_EXIT () {
     exit 1 # エラー終了
 }
 # テスト開始
-echo "teat1: 正常系"
+echo "teat1-1: 正常系"
 ./report5.sh 5 10 > $tmp-result
 echo "5" > $tmp-ans
 diff $tmp-result $tmp-ans || ERROR_EXIT "error in test1-1"
 
-echo "teat2: 正常系"
+echo "teat1-2: 正常系"
 ./report5.sh 21 14 > $tmp-result
 echo "7" > $tmp-ans
-diff $tmp-result $tmp-ans || ERROR_EXIT "error in test1-1"
+diff $tmp-result $tmp-ans || ERROR_EXIT "error in test1-2"
+
+echo "teat2-1: 異常系"
+./report5.sh 21 > $tmp-result
+echo "Error!" > $tmp-ans
+diff $tmp-result $tmp-ans || ERROR_EXIT "error in test2-1"
+
+echo "teat2-2: 異常系"
+./report5.sh 21 14 > $tmp-result
+echo "Error!" > $tmp-ans
+diff $tmp-result $tmp-ans || ERROR_EXIT "error in test2-2"
