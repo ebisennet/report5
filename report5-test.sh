@@ -21,11 +21,21 @@ echo "7" > $tmp-ans
 diff $tmp-result $tmp-ans || ERROR_EXIT "error in test1-2"
 
 echo "teat2-1: 異常系"
-./report5.sh 21 > $tmp-result
+./report5.sh > $tmp-result
 echo "Error!" > $tmp-ans
 diff $tmp-result $tmp-ans || ERROR_EXIT "error in test2-1"
 
 echo "teat2-2: 異常系"
-./report5.sh 21 14 > $tmp-result
+./report5.sh 21 > $tmp-result
 echo "Error!" > $tmp-ans
 diff $tmp-result $tmp-ans || ERROR_EXIT "error in test2-2"
+
+echo "teat2-3: 異常系"
+./report5.sh -21 > $tmp-result
+echo "Error!" > $tmp-ans
+diff $tmp-result $tmp-ans || ERROR_EXIT "error in test2-3"
+
+echo "teat2-4: 異常系"
+./report5.sh 21 -1 > $tmp-result
+echo "Error!" > $tmp-ans
+diff $tmp-result $tmp-ans || ERROR_EXIT "error in test2-4"
