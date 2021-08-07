@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 tmp=/tmp/$$ # 変数を使って表記を短く
 echo "input 2 argments" > $tmp-args # 回答準備：引数の数
 echo "input natural number" > $tmp-nat # 回答準備：数字じゃない
@@ -9,5 +9,5 @@ exit 1 # エラー終了
 }
 # テスト開始
 # teat1: 引数の数が⾜りない
-./same.sh 2> $tmp-ans && ERROR_EXIT "error in test1-1" # エラーメッセージを関数に渡す
+./report5.sh 2> $tmp-ans && ERROR_EXIT "error in test1-1" # エラーメッセージを関数に渡す
 diff $tmp-ans $tmp-args || ERROR_EXIT "error in test1-2"

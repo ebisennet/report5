@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 if [ $# -ne 2 ]; then # 引数の数が2でない場合(not equal)
 echo "input 2 argments" 1>&2 # エラーメッセージ
 exit 1 # 終了ステータス
