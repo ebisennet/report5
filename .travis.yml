@@ -1,5 +1,5 @@
 language: bash
 script:
-  - echo "最大公約数を算出するスクリプトをテストします。"
+  - echo test is gcd script
   - echo Travis CI test in .travis.yml
   - ./report5-test.sh
