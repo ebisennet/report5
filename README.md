@@ -25,4 +25,7 @@ ERROR!
 
 $ ./report5.sh -12 4
 ERROR!
+
+$ ./report5.sh abc
+ERROR!
 ```
