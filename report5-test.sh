@@ -28,7 +28,7 @@ diff $tmp-result $tmp-ans || echo "error in test2-1" >> $tmp-error
 
 echo "teat2-2: 異常系"
 ./report5.sh 21 > $tmp-result
-echo "Error!k" > $tmp-ans
+echo "Error!" > $tmp-ans
 diff $tmp-result $tmp-ans || echo "error in test2-2" >> $tmp-error
 
 echo "teat2-3: 異常系"
@@ -38,7 +38,7 @@ diff $tmp-result $tmp-ans || echo "error in test2-3" >> $tmp-error
 
 echo "teat2-4: 異常系"
 ./report5.sh 21 -1 > $tmp-result
-echo "Error!k" > $tmp-ans
+echo "Error!" > $tmp-ans
 diff $tmp-result $tmp-ans || echo "error in test2-4" >> $tmp-error
 
 if [ -f $tmp-error ]; then
