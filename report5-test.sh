@@ -43,4 +43,4 @@ diff $tmp-result $tmp-ans || echo "error in test2-4" >> $tmp-error
 
 if [ -f $ $tmp-error ]; then
     ERROR_EXIT
-}
+fi
